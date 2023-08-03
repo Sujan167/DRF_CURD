@@ -28,7 +28,7 @@ pipeline{
         stage("Deploy"){
             steps{
                 echo "Deploying the container"
-                sh "docker run -d -p 8000:8000 itssujan/DRF_CURD:latest"
+                sh "docker run -d -p 8000:8000 ${env.dockerHubUser}/DRF_CURD:latest"
             }
         }
     }
